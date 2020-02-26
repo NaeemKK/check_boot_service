@@ -1,0 +1,10 @@
+[Unit]
+Description=Check successful boot service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=bash -C /usr/local/sbin/toradex-check-succ-boot.sh
+
+[Install]
+WantedBy=toradex-successfull-boot.target
